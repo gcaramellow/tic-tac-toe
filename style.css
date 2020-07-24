@@ -1,0 +1,133 @@
+:root {
+  --grid-color: #272727;
+  --grid-side: 400px;
+}
+
+body {
+  font-family: 'Permanent Marker', cursive !important;
+  background-color: #747474 !important;
+}
+
+.navbar {
+  background-color: var(--grid-color);
+}
+
+.navbar-brand {
+  color: #747474;
+}
+.green {
+  color: #14a76c;
+}
+.salmon {
+  color: #ff652f;
+}
+.yellow {
+  color: #ffe400;
+}
+
+.btn-success {
+  background-color: #14a76c !important;
+}
+.btn-primary {
+  background-color: #ff652f !important;
+  border: none !important;
+}
+.btn-secondary {
+  background-color: #747474 !important;
+}
+.turn-marker-x-class {
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-right: 50px solid #14a76c;
+  border-bottom: 25px solid transparent;
+}
+.turn-marker-o-class {
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-left: 50px solid #14a76c;
+  border-bottom: 25px solid transparent;
+}
+
+.grid {
+  display: grid;
+  height: var(--grid-side);
+  width: var(--grid-side);
+  grid-template-columns: repeat(3, calc((1/3) * var(--grid-side)));
+  grid-gap: 0;
+
+}
+.square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc((1/3) * var(--grid-side));
+  width: calc((1/3) * var(--grid-side));
+}
+.square-0,
+.square-1,
+.square-2,
+.square-3,
+.square-4,
+.square-5 {
+  border-bottom: 4px solid var(--grid-color);
+}
+.square-3,
+.square-4,
+.square-5,
+.square-6,
+.square-7,
+.square-8 {
+  border-top: 4px solid var(--grid-color);
+}
+.square-0,
+.square-1,
+.square-3,
+.square-4,
+.square-6,
+.square-7 {
+  border-right: 4px solid var(--grid-color);
+}
+.square-1,
+.square-2,
+.square-4,
+.square-5,
+.square-7,
+.square-8 {
+  border-left: 4px solid var(--grid-color);
+}
+.current-turn {
+  border-bottom: 8px solid var(--grid-color);
+}
+.x {
+  background: #ff652f;
+  height: 100px;
+  position: relative;
+  width: 20px;
+  transform: rotate(45deg) 
+}
+.x:after {
+  background: #ff652f;
+  content: "";
+  height: 20px;
+  left: -40px;
+  position: absolute;
+  top: 40px;
+  width: 100px;
+}
+.o {
+  width: 100px;
+  height: 100px;
+  background: #747474;
+  border-radius: 50%;
+  border: solid 20px #ffe400;
+}
+.o-modal {
+  width: 100px;
+  height: 100px;
+  background: white;
+  border-radius: 50%;
+  border: solid 20px #ffe400;
+}
+
